@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <!-- Favicon Link -->
+  <link rel="icon" href="icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.19.1/dist/full.js"></script>
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+  </head>
+  <body class="font-sans bg-gray-100">
+    <!-- Navbar (with Logo) -->
+    <nav class="bg-primary sticky top-0 z-50 shadow-md">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <a href="#home">
+          <img
+            src="IMG-20240108-WA0031.jpg"
+            alt="Restaurant Logo"
+            class="w-32 h-10"
+          />
+          <!-- Replace logo.png with your logo image -->
+        </a>
+
+        <!-- Replace with your actual logo image -->
+        <ul class="flex space-x-6 text-black">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#menu" class="hover:underline">Menu</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#blog" class="hover:underline">Blog</a></li>
+          <li><a href="#reviews" class="hover:underline">Reviews</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+          <li><a href="#location" class="hover:underline">Location</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    
+    <main id="main" class="bg-[#FF6347] text-white py-16">
+      <section
+      id="home"
+      class="relative w-full h-screen bg-cover bg-center transition-all duration-1000"
+      style="background-image: url('/images/image-1.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div
+        class="relative z-10 flex flex-col justify-center items-center w-full h-full text-center text-white"
+      >
+        <h1 class="text-5xl font-bold">Welcome to KingsTable</h1>
+      </div>
+    </section>
+
+    <script>
+      // Array of image URLs for the changing background
+      const images = [
+        "/images/image-1.jpg", // First image (make sure it's in the correct folder)
+        "/images/image-2.jpg", // Second image
+        "/images/image-3.jpg", // Third image
+        "/images/image-4.jpg", // Third image
+
+      ];
+
+      let currentImageIndex = 0;
+
+      // Function to change the background image
+      function changeBackgroundImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through the images
+        const homeSection = document.getElementById("home");
+        homeSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
+      }
+
+      // Change the background every 3 seconds (5000ms)
+      setInterval(changeBackgroundImage, 5000);
+    </script>
+
+   <!-- Menu Section (Table with Meal Images) -->
+<section id="menu" class="container mx-auto p-8">
+  <h2 class="text-4xl font-bold mb-6 text-center text-white-800">Our Menu</h2>
+  <div class="overflow-x-auto">
+    <table class="table w-full text-left border-collapse border border-gray-300">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Price Range (UGX)</th>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Meal</th>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Image</th>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+
+        <!-- Price Range: 5000 - 15000 UGX -->
+        <tr class="bg-gray-200">
+          <td colspan="4" class="border-b px-4 py-2 font-semibold text-gray-800">5000 - 15000 UGX</td>
+        </tr>
+        
+        <!-- Pasta -->
+        <tr class="hover:bg-gray-50">
+          <td class="border-b px-4 py-2 text-gray-600"></td>
+          <td class="border-b px-4 py-2 font-semibold text-gray-800">Pasta</td>
+          <td class="border-b px-4 py-2">
+            <img src="pasta-image.jpg" alt="Pasta" class="w-16 h-16 rounded-full object-cover" />
+          </td>
+          <td class="border-b px-4 py-2 text-gray-600">Delicious Italian pasta with fresh herbs and sauce.</td>
+        </tr>
+        
+        <!-- Burger -->
+        <tr class="hover:bg-gray-50">
+          <td class="border-b px-4 py-2 text-gray-600"></td>
+          <td class="border-b px-4 py-2 font-semibold text-gray-800">Burger</td>
+          <td class="border-b px-4 py-2">
+            <img src="burger-image.jpg" alt="Burger" class="w-16 h-16 rounded-full object-cover" />
+          </td>
+          <td class="border-b px-4 py-2 text-gray-600">Juicy beef burger with all the toppings.</td>
+        </tr>
+        
+        <!-- Price Range: 15000 - 25000 UGX -->
+        <tr class="bg-gray-200">
+          <td colspan="4" class="border-b px-4 py-2 font-semibold text-gray-800">15000 - 25000 UGX</td>
+        </tr>
+
+        <!-- Pizza -->
+        <tr class="hover:bg-gray-50">
+          <td class="border-b px-4 py-2 text-gray-600"></td>
+          <td class="border-b px-4 py-2 font-semibold text-gray-800">Pizza</td>
+          <td class="border-b px-4 py-2">
+            <img src="pizza-image.jpg" alt="Pizza" class="w-16 h-16 rounded-full object-cover" />
+          </td>
+          <td class="border-b px-4 py-2 text-gray-600">Cheesy pizza with a variety of toppings.</td>
+        </tr>
+        
+        <!-- Additional price ranges and meals go here -->
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- about section -->
+    <section id="about" class="container mx-auto p-8 text-center">
+      <h2 class="text-4xl font-bold mb-6">About Us</h2>
+      
+        <p> We are a family-owned kitchen that offers a variety of delicious
+          meals made from fresh ingredients. Our goal is to provide a wonderful
+          dining experience for our customers with a cozy atmosphere and great
+          service.</p>
+        <p>Whether you’re here for a quick bite or a special occasion, we promise
+          to make every meal memorable.</p>
+        <p> We pride ourselves on using only the finest ingredients and making
+          every dish with care and love</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+         
+      
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img
+              src="Glovo.jpeg"
+              alt="Restaurant Image 2"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <p class="text-lg text-gray-700">
+              We also do delivery to all places, offices, homes and other bussiness . Contact us from where you are and bring our  services to you as fast as possible.
+            </p>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img
+              src="out-side.JPG"
+              alt="OUT-SIDE CATERING"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <p class="text-lg text-gray-700">
+              More so we do out-side catering in all sorts of occusions like bithday parties, wedding, introduction, give away and those with vistors or you want some one to cook for you special meals.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img
+              src="local.JPG"
+              alt="Restaurant Image 1"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <p class="text-lg text-gray-700">
+              For the local foods we are the proffesionals here in kampala , come and testify your self and enjoy the best dishes.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        
+     <!-- Card 1 -->
+     <!-- <div class="bg-white rounded-lg shadow-lg p-6">
+      <img
+        src="images.jpeg"
+        alt="Restaurant Image 1"
+        class="w-full h-48 object-cover rounded-lg mb-4"
+      />
+      <p class="text-lg text-gray-700">
+        We are ready  to serve you the best meals and drinks at our location if you are near. Come lets enjoy together with families, friends and relatives.
+      </p>
+    </div> -->
+        <!-- Card 2 -->
+  
+      </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section id="reviews" class="bg-#FF6346-100 py-16">
+      <div class="container mx-auto p-8">
+        <h2 class="text-4xl font-bold mb-6 text-center">
+          What Our Customers Are Saying
+        </h2>
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- Review 1 -->
+          <div class="w-full sm:w-1/3 p-4 bg-white rounded-lg shadow-md">
+            <p class="italic text-gray-600">
+              "The food was absolutely amazing! The staff was friendly, and the
+              atmosphere was perfect for a family dinner. Will definitely come
+              back!"
+            </p>
+            <div class="mt-4 flex items-center">
+              <img
+                src="food.jpg"
+                alt="Customer 1"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <p class="font-semibold">Food</p>
+                <p class="text-sm text-gray-500">From Customer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div class="w-full sm:w-1/3 p-4 bg-white rounded-lg shadow-md">
+            <p class="italic text-gray-600">
+              "A great experience! The meat was perfect, and the staff made us
+              feel at home. Highly recommend!"
+            </p>
+            <div class="mt-4 flex items-center">
+              <img
+                src="meat.jpg"
+                alt="Customer 2"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <p class="font-semibold">Meat</p>
+                <p class="text-sm text-gray-500">From Customer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div class="w-full sm:w-1/3 p-4 bg-white rounded-lg shadow-md">
+            <p class="italic text-gray-600">
+              "Great atmosphere, friendly service, and the burger was out of
+              this world. Will definitely recommend to friends!"
+            </p>
+            <div class="mt-4 flex items-center">
+              <img
+                src="bugger.jpg"
+                alt="Customer 3"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <p class="font-semibold">Burger</p>
+                <p class="text-sm text-gray-500">From Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section id="contact" class="py-16 px-6 bg-[#FF6346]">
+      <div class="max-w-7xl mx-auto text-center">
+        <!-- Title -->
+        <h2 class="text-3xl font-semibold text-white mb-6">Provide Your Email to Contact Us</h2>
+        <p class="text-lg text-gray-200 mb-8">Please enter your email address, and we'll get back to you as soon as possible!</p>
+        
+        <!-- Contact Form -->
+        <form id="contact-form" action="#" method="POST" class="max-w-lg mx-auto space-y-6">
+          <!-- Email Input -->
+          <div class="space-y-2">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              class="input input-bordered w-full p-4 rounded-md text-gray-800"
+              required
+            />
+          </div>
+    
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-full py-3 rounded-md text-white bg-[#white] hover:bg-[#e55341] mt-6">
+            Submit
+          </button>
+        </form>
+    
+        <!-- Thank You Message (Hidden Initially) -->
+        <p id="thank-you-message" class="mt-6 text-gray-100 text-lg hidden">Thank you! We will contact you soon.</p>
+      </div>
+    </section>
+    
+    <script>
+      // Handling form submission
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the default form submission
+        
+        // Hide the form and show the thank you message
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('thank-you-message').style.display = 'block';
+        
+        // Optional: You can handle the email submission logic here
+        // For example, send it to a backend server or use a service to handle the email.
+      });
+    </script>
+      <!-- Social Media -->
+      <div class="mt-8 text-center">
+        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+        <div class="flex justify-center md:justify-center space-x-6">
+          <a href="mailto:youremail@example.com" class="text-gray-200 hover:text-white">
+            <i class="bx bx-envelope"></i> Email
+          </a>
+          <a href="tel:+25678678258" class="text-gray-200 hover:text-white">
+            <i class="bx bx-phone"></i> Call
+          </a>
+          <a href="https://wa.me/0703407307" class="text-gray-200 hover:text-white">
+            <i class="bx bxl-whatsapp"></i> Whatsapp
+          </a>
+        </div>
+      </div>
+      
+  </section>
+    
+    <!-- Locations Section -->
+    <section id="location" class="py-16 px-6 bg-#FF6346-100">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-[#FF6347] mb-8">Our Location</h2>
+        <div class="card shadow-xl bg-white p-6 rounded-lg w-full max-w-sm mx-auto">
+          <img
+            src="rest.jpeg"  
+            alt="Location Image"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-xl text-[#FF6347] font-semibold">
+            Find us:
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Kisaasi - Bukoto road
+          </p>
+          <p class="text-gray-600 mt-2">
+           After Bahai round-about
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+    <!-- Footer (Optional) -->
+    <footer class="bg-[#FF6346] text-white py-8">
+        <div class="mt-8 text-center border-t border-gray-300 pt-4">
+          <p class="text-black-200">&copy; 2025 KingsTable. We are delighted to welcome you to our location and serve you our best for your health..</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
