@@ -93,66 +93,84 @@
       setInterval(changeBackgroundImage, 5000);
     </script>
 
-   <!-- Menu Section (Table with Meal Images) -->
 <section id="menu" class="container mx-auto p-8">
   <h2 class="text-4xl font-bold mb-6 text-center text-white-800">Our Menu</h2>
   <div class="overflow-x-auto">
     <table class="table w-full text-left border-collapse border border-gray-300">
       <thead class="bg-gray-100">
         <tr>
-          <th class="border-b px-4 py-2 text-lg text-gray-700">Price Range (UGX)</th>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Day</th>
           <th class="border-b px-4 py-2 text-lg text-gray-700">Meal</th>
           <th class="border-b px-4 py-2 text-lg text-gray-700">Image</th>
-          <th class="border-b px-4 py-2 text-lg text-gray-700">Description</th>
+          <th class="border-b px-4 py-2 text-lg text-gray-700">Price Range (UGX)</th>
         </tr>
       </thead>
       <tbody class="bg-white">
-
-        <!-- Price Range: 5000 - 15000 UGX -->
-        <tr class="bg-gray-200">
-          <td colspan="4" class="border-b px-4 py-2 font-semibold text-gray-800">5000 - 15000 UGX</td>
-        </tr>
-        
-        <!-- Pasta -->
-        <tr class="hover:bg-gray-50">
-          <td class="border-b px-4 py-2 text-gray-600"></td>
-          <td class="border-b px-4 py-2 font-semibold text-gray-800">Pasta</td>
-          <td class="border-b px-4 py-2">
-            <img src="pasta-image.jpg" alt="Pasta" class="w-16 h-16 rounded-full object-cover" />
+        <!-- Monday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Monday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Rice, Posho/Cassava served with Beans</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day5.jpg" alt="Monday Meal" class="w-32 h-32 object-cover">
           </td>
-          <td class="border-b px-4 py-2 text-gray-600">Delicious Italian pasta with fresh herbs and sauce.</td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
         </tr>
-        
-        <!-- Burger -->
-        <tr class="hover:bg-gray-50">
-          <td class="border-b px-4 py-2 text-gray-600"></td>
-          <td class="border-b px-4 py-2 font-semibold text-gray-800">Burger</td>
-          <td class="border-b px-4 py-2">
-            <img src="burger-image.jpg" alt="Burger" class="w-16 h-16 rounded-full object-cover" />
+        <!-- Tuesday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Tuesday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Rice, Sweetpotato with G.nuts and Ggobe</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day2.jpg" alt="Tuesday Meal" class="w-32 h-32 object-cover">
           </td>
-          <td class="border-b px-4 py-2 text-gray-600">Juicy beef burger with all the toppings.</td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
         </tr>
-        
-        <!-- Price Range: 15000 - 25000 UGX -->
-        <tr class="bg-gray-200">
-          <td colspan="4" class="border-b px-4 py-2 font-semibold text-gray-800">15000 - 25000 UGX</td>
-        </tr>
-
-        <!-- Pizza -->
-        <tr class="hover:bg-gray-50">
-          <td class="border-b px-4 py-2 text-gray-600"></td>
-          <td class="border-b px-4 py-2 font-semibold text-gray-800">Pizza</td>
-          <td class="border-b px-4 py-2">
-            <img src="pizza-image.jpg" alt="Pizza" class="w-16 h-16 rounded-full object-cover" />
+        <!-- Wednesday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Wednesday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Posho served with Beef</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day42.jpg" alt="Wednesday Meal" class="w-32 h-32 object-cover">
           </td>
-          <td class="border-b px-4 py-2 text-gray-600">Cheesy pizza with a variety of toppings.</td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
         </tr>
-        
-        <!-- Additional price ranges and meals go here -->
-
+        <!-- Thursday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Thursday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Rice, Cassava/Kivuvu served with Beans</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day4.jpg" alt="Thursday Meal" class="w-32 h-32 object-cover">
+          </td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
+        </tr>
+        <!-- Friday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Friday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Sweetpotato/Yam served with plain G.nuts</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day7.jpg" alt="Friday Meal" class="w-32 h-32 object-cover">
+          </td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
+        </tr>
+        <!-- Saturday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Saturday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Irish potatoes, Rice and Peas and Beef</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day6.jpg" alt="Saturday Meal" class="w-32 h-32 object-cover">
+          </td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
+        </tr>
+        <!-- Sunday -->
+        <tr>
+          <td class="border-b px-4 py-2 text-gray-700">Sunday</td>
+          <td class="border-b px-4 py-2 text-gray-700">Matooke, Brown rice, Spaghetti served with Chicken and Beans</td>
+          <td class="border-b px-4 py-2 text-gray-700">
+            <img src="day1.jpg" alt="Sunday Meal" class="w-32 h-32 object-cover">
+          </td>
+          <td class="border-b px-4 py-2 text-gray-700">UGX 25,000</td>
+        </tr>
       </tbody>
     </table>
-    <a href="#home" class="block text-center text-white bg-[#FF6347] px-6 py-3 rounded-full hover:bg-[#e55341] mt-6">Back to Home</a>
   </div>
 </section>
 
